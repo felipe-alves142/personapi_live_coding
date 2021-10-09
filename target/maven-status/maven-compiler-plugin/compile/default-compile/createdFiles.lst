@@ -1,0 +1,7 @@
+one\digitalinnovation\personapi\controller\PersonController.class
+one\digitalinnovation\personapi\enums\PhoneTypes.class
+one\digitalinnovation\personapi\entity\Person.class
+one\digitalinnovation\personapi\entity\Phone$PhoneBuilder.class
+one\digitalinnovation\personapi\entity\Phone.class
+one\digitalinnovation\personapi\entity\Person$PersonBuilder.class
+one\digitalinnovation\personapi\PersonapiApplication.class
