@@ -16,6 +16,16 @@
 
 	<properties>
 		<java.version>11</java.version>
+
+			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			<project.version>6.2.0.0-SNAPSHOT</project.version>
+			<springfox-swagger2.version>2.6.1</springfox-swagger2.version>
+			<org.apache.directory.api.api-all.version>1.0.0-M28</org.apache.directory.api.api-all.version>
+			<!-- REMOVE THIS <spring.framework.version>4.2.4.RELEASE</spring.framework.version> -->
+			<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
+			<!-- REMOVE THIS <spring.version>4.2.4.RELEASE</spring.version> -->
+			<start-class>hello.SpringBootWebApplicationTest</start-class>
+
 	</properties>
 
 	<dependencies>

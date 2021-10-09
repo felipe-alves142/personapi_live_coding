@@ -3,11 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for Unknown" enabled="true">
-        <sourceOutputDir name="../../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-      </profile>
       <profile name="Annotation profile for personapi" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -31,9 +26,7 @@
         <module name="personapi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="13">
-      <module name="wrapper" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
