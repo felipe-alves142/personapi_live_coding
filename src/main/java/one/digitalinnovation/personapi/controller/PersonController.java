@@ -1,5 +1,6 @@
 package one.digitalinnovation.personapi.controller;
 
+import exeption.PersonNotFoundExeption;
 import one.digitalinnovation.personapi.dto.request.PersonDTO;
 import one.digitalinnovation.personapi.dto.response.MessageResponseDTO;
 import one.digitalinnovation.personapi.entity.Person;
@@ -30,5 +31,21 @@ public class PersonController {
     @GetMapping
     public List<PersonDTO> listAll(){
         return personService.listAll();
+    }
+
+    @GetMapping("/{id}")
+    public PersonDTO getById(@PathVariable Long id) throws PersonNotFoundExeption {
+        return personService.findById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(@PathVariable Long id) throws PersonNotFoundExeption {
+        personService.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public MessageResponseDTO update(@PathVariable Long id, @RequestBody PersonDTO personDTO){
+        return personService.updatePerson(id,personDTO);
     }
 }
