@@ -12,5 +12,8 @@
 <ul>
   <li>Clone o projeto</li>
   <li>Rode o projeto</li>
-  <li></li>
+  <li>Cadastre a pessoa</li>
+  ```sh 
+    {aaa}
+  ```
 </ul>
