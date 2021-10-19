@@ -61,6 +61,7 @@ Personapi é um projeto feito no bootcamp Capgemini Fullstack Java and Angular. 
   ```sh
   http://localhost:8080/api/v1/people/(Coloque o id da pessoas que que quer modificar)
   ```
+  Mude os dados que quer
   ```sh 
   {
     "id": 1,
