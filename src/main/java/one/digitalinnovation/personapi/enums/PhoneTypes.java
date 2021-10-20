@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
-public enum PhoneTypes {
+public enum     PhoneTypes {
     MOBILE("Mobile"),
     COMMERCIAL("Commercial"),
     HOME("Home");
