@@ -14,10 +14,9 @@ Personapi é um projeto feito no bootcamp Capgemini Fullstack Java and Angular. 
 
 ## Como executar o projeto
 
-  - Clone o projeto
-  - Execute o projeto
   - Baixe algum API client, nesse projeto foi usado o Postman
-  
+  - Entre em https://personapi-live-coding.herokuapp.com/api/v1/people/
+  - Siga os algum dos passos a seguir  
   ### Cadastre a pessoa ( No campo type pode ser COMMERCIAL, MOBILE e HOME 
   ```sh 
     {
