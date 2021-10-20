@@ -7,6 +7,11 @@ Personapi é um projeto feito no bootcamp Capgemini Fullstack Java and Angular. 
   - Deletar pessoas pelo id
   - Mudar dados já existentes
 
+  ## Como executar o projeto no terminal
+  ```sh
+  mvn spring-boot:run
+  ```
+
 ## Como executar o projeto
 
   - Clone o projeto
