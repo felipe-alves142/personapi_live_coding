@@ -1,7 +1,5 @@
 package one.digitalinnovation.personapi.mapper;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -13,12 +11,14 @@ import one.digitalinnovation.personapi.entity.Person;
 import one.digitalinnovation.personapi.entity.Person.PersonBuilder;
 import one.digitalinnovation.personapi.entity.Phone;
 import one.digitalinnovation.personapi.entity.Phone.PhoneBuilder;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-10-17T13:54:35-0300",
+    date = "2021-10-21T09:58:04-0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.12 (Azul Systems, Inc.)"
 )
+@Component
 public class PersonMapperImpl implements PersonMapper {
 
     @Override
@@ -29,9 +29,7 @@ public class PersonMapperImpl implements PersonMapper {
 
         PersonBuilder person = Person.builder();
 
-        if ( personDTO.getBirthDate() != null ) {
-            person.birthDate( LocalDate.parse( personDTO.getBirthDate(), DateTimeFormatter.ofPattern( "dd-MM-yyyy" ) ) );
-        }
+        person.birthDate( personDTO.getBirthDate() );
         person.id( personDTO.getId() );
         person.firstName( personDTO.getFirstName() );
         person.secondName( personDTO.getSecondName() );
@@ -52,9 +50,7 @@ public class PersonMapperImpl implements PersonMapper {
         personDTO.id( person.getId() );
         personDTO.firstName( person.getFirstName() );
         personDTO.secondName( person.getSecondName() );
-        if ( person.getBirthDate() != null ) {
-            personDTO.birthDate( DateTimeFormatter.ISO_LOCAL_DATE.format( person.getBirthDate() ) );
-        }
+        personDTO.birthDate( person.getBirthDate() );
         personDTO.cpf( person.getCpf() );
         personDTO.phones( phoneListToPhoneDTOList( person.getPhones() ) );
 
