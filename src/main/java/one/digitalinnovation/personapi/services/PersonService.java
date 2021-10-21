@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class PersonService {
     private PersonRepository personRepository;
 
-    private final PersonMapper personMapper;
+    private final PersonMapper personMapper= PersonMapper.INSTANCE;
 
     public MessageResponseDTO createPerson(@Valid PersonDTO personDTO){
         Person savedToPerson = personMapper.toModel(personDTO);

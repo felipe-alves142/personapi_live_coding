@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class PersonDTO {
 
 
@@ -28,7 +30,7 @@ public class PersonDTO {
     @Size(min = 2,max = 100)
     private String secondName;
 
-    private LocalDate birthDate;
+    private String birthDate;
 
 
     @NotEmpty
