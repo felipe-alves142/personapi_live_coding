@@ -15,44 +15,44 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-10-21T09:58:04-0300",
+    date = "2021-10-21T10:16:29-0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.12 (Azul Systems, Inc.)"
 )
 @Component
 public class PersonMapperImpl implements PersonMapper {
 
     @Override
-    public Person toModel(PersonDTO personDTO) {
-        if ( personDTO == null ) {
+    public Person toModel(PersonDTO dto) {
+        if ( dto == null ) {
             return null;
         }
 
         PersonBuilder person = Person.builder();
 
-        person.birthDate( personDTO.getBirthDate() );
-        person.id( personDTO.getId() );
-        person.firstName( personDTO.getFirstName() );
-        person.secondName( personDTO.getSecondName() );
-        person.cpf( personDTO.getCpf() );
-        person.phones( phoneDTOListToPhoneList( personDTO.getPhones() ) );
+        person.birthDate( dto.getBirthDate() );
+        person.id( dto.getId() );
+        person.firstName( dto.getFirstName() );
+        person.secondName( dto.getSecondName() );
+        person.cpf( dto.getCpf() );
+        person.phones( phoneDTOListToPhoneList( dto.getPhones() ) );
 
         return person.build();
     }
 
     @Override
-    public PersonDTO toDto(Person person) {
-        if ( person == null ) {
+    public PersonDTO toDTO(Person dto) {
+        if ( dto == null ) {
             return null;
         }
 
         PersonDTOBuilder personDTO = PersonDTO.builder();
 
-        personDTO.id( person.getId() );
-        personDTO.firstName( person.getFirstName() );
-        personDTO.secondName( person.getSecondName() );
-        personDTO.birthDate( person.getBirthDate() );
-        personDTO.cpf( person.getCpf() );
-        personDTO.phones( phoneListToPhoneDTOList( person.getPhones() ) );
+        personDTO.id( dto.getId() );
+        personDTO.firstName( dto.getFirstName() );
+        personDTO.secondName( dto.getSecondName() );
+        personDTO.birthDate( dto.getBirthDate() );
+        personDTO.cpf( dto.getCpf() );
+        personDTO.phones( phoneListToPhoneDTOList( dto.getPhones() ) );
 
         return personDTO.build();
     }

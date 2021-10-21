@@ -1,5 +1,6 @@
 package one.digitalinnovation.personapi.dto.request;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Data
 @Builder
+@AllArgsConstructor
 public class PersonDTO {
 
 
@@ -36,5 +38,4 @@ public class PersonDTO {
     @Valid
     @NotEmpty
     private List<PhoneDTO> phones;
-
 }

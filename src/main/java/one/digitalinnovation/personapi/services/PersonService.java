@@ -32,14 +32,14 @@ public class PersonService {
     public List<PersonDTO> listAll() {
         List<Person> allPeople= personRepository.findAll();
               return allPeople.stream()
-                .map(personMapper::toDto)
+                .map(personMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
     public PersonDTO findById(Long id) throws PersonNotFoundExeption {
         Person person = verifyIfExists(id);
 
-        return personMapper.toDto(person);
+        return personMapper.toDTO(person);
     }
 
 
