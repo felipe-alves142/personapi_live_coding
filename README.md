@@ -15,7 +15,7 @@ Personapi é um projeto feito no bootcamp Capgemini Fullstack Java and Angular. 
 ## Como executar o projeto
 
   - Baixe algum API client, nesse projeto foi usado o Postman
-  - Entre em https://personapi-live-coding.herokuapp.com/api/v1/people/
+  - Entre em http://localhost:8080/api/v1/people/
   - Siga os algum dos passos a seguir  
   ### Cadastre a pessoa ( No campo type pode ser COMMERCIAL, MOBILE e HOME 
   ```sh 
@@ -55,7 +55,8 @@ Personapi é um projeto feito no bootcamp Capgemini Fullstack Java and Angular. 
     ]
 }
   ```
-  - Deletar uma pessoas pelo id
+  
+  Deletar uma pessoas pelo id
   
   No API client que está usando troque o verbo http por DELETE
   ```sh
